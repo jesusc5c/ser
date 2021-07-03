@@ -1,0 +1,87 @@
+###obtener todos los empleados
+GET http://localhost:3000/api/empleados HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwYWQyOWFlMDgzNWI2MWZmODFkNzhlZCIsIm5hbWUiOiJKZXN1cyIsImVtYWlsIjoiamVzdXMubG9wZXouYzVjQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJEdtN0Z6b3VwLmU1MVM2Y0NQay5PSnVYZ0h2aGVOeXU2Ly9KeWlDelRES2ZhbXZSWUtOTE1hIiwiX192IjowfSwiaWF0IjoxNjIyNDA4NDU4LCJleHAiOjE2MjI0MTIwNTh9.zQWkURE6SeT7gB1CmwHWNAChw35fy6d9eVwJjAXMqOE
+
+###insertar prpoducto
+POST http://localhost:3000/api/empleados HTTP/1.1
+Content-Type: application/json
+
+{
+"Nombre":"Tigre toño",
+"Puesto": "tics",
+"Departamento": "Computer Sciences",
+"Salario": 15000
+}
+
+###CONSULTAR POR ID
+GET http://localhost:3000/api/empleados HTTP/1.1
+Content-Type: application/json
+
+###modificar por id
+PUT http://localhost:3000/api/empleados/605ce8ce62424829f8dee954 HTTP/1.1
+Content-Type: application/json
+
+{
+"Nombre":"Tigre toño3",
+"Puesto": "tics3",
+"Departamento": "Computer Sciences3",
+"Salario": 150002
+}
+
+###Eliminar id
+DELETE http://localhost:3000/api/empleados/605ce8ce62424829f8dee954 HTTP/1.1
+Content-Type: application/json
+///ddokd
+
+###iniciar sesion 
+POST http://3.137.187.190:3000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "jlopez.moonware@gmail.com",
+    "password": "12345"
+}
+###usurios
+GET http://localhost:3000/api/users HTTP/1.1
+Content-Type: application/json
+Authorization: token-auth eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwYmZiODdhMjhkNmQ4MDkxMGY5MzgwZSIsIm5hbWUiOiJqZXN1cyBsb3BleiIsImVtYWlsIjoiamxvcGV6Lm1vb253YXJlQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJFpKREt1NEZuOEl0aS9zZkFyelNSeXU3Lm1BZEVmUklpLjA4WTZZY01Uc0lCSmRzWjFLZWlXIiwidGlwbyI6IjEiLCJfX3YiOjB9LCJpYXQiOjE2MjUwNzA4NzMsImV4cCI6MTYyNTA3NDQ3M30.dYqaShIYd-dMfGoA9l13W-76HrsCIQp50nCBuNAtd2E
+
+
+###crear un usuario
+POST http://localhost:3000/api/users HTTP/1.1
+Content-Type: application/json
+Authorization: token-auth eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwYjQ0YmYyYTUxYTQ3MWVkMDk5MjllMyIsIm5hbWUiOiJqZXN1cyBsb3BlejIiLCJlbWFpbCI6ImoyMTY0NTA1MjFAaXR6LmVkdS5teCIsInBhc3N3b3JkIjoiJDJhJDEwJC5pLmNEaG1DNTV4am1EcFF6eTR4OU9DUXlGVGJta0l4VHFLVWRpZ3c2ckFkWXNsdFVNdXltIiwidGlwbyI6IjIiLCJfX3YiOjB9LCJpYXQiOjE2MjMxNzY2ODAsImV4cCI6MTYyMzE4MDI4MH0.1UZ1QxbWGB-LMHy52lI1Pngek1lGkffY0MyStT9qXAU
+// tipo 1 = administrador tipo 2= usuario regular
+
+{
+    "name": "jesus lopez",
+    "email": "jlopez.moonware@gmail.com",
+    "password": "12345",
+    "tipo": 1
+}
+
+
+###consultar usuario por ID
+GET HTTP://localhost:3000/api/users/60b420db0200643a20273e96 HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwYjQyMGRiMDIwMDY0M2EyMDI3M2U5NiIsIm5hbWUiOiJqZXN1cyBsb3BleiIsImVtYWlsIjoibDE2NDUwNTIxQGl0ei5lZHUubXgiLCJwYXNzd29yZCI6IiQyYSQxMCRhSHZneU9QM290WTV0TncuYWdiM1V1RHp1T2lGY0xQWTY0WlRieGFJLlVkVW5wWS42cFJZLiIsIl9fdiI6MH0sImlhdCI6MTYyMjQxNzk0MSwiZXhwIjoxNjIyNDIxNTQxfQ.nXDt0UZlrbWpdEdqdxnoaaGnOzKPu-ZCt8MXuwVjoHg
+
+###eliminar usuario por ID
+DELETE HTTP://localhost:3000/api/users/60b4025189d440348485ff93 HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwYjQyMGRiMDIwMDY0M2EyMDI3M2U5NiIsIm5hbWUiOiJqZXN1cyBsb3BleiIsImVtYWlsIjoibDE2NDUwNTIxQGl0ei5lZHUubXgiLCJwYXNzd29yZCI6IiQyYSQxMCRhSHZneU9QM290WTV0TncuYWdiM1V1RHp1T2lGY0xQWTY0WlRieGFJLlVkVW5wWS42cFJZLiIsIl9fdiI6MH0sImlhdCI6MTYyMjQxNzk0MSwiZXhwIjoxNjIyNDIxNTQxfQ.nXDt0UZlrbWpdEdqdxnoaaGnOzKPu-ZCt8MXuwVjoHg
+
+
+
+###modificar un usuario por ID
+PUT http://localhost:3000/api/users/60b44bf2a51a471ed09929e3 HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwYjQyMGRiMDIwMDY0M2EyMDI3M2U5NiIsIm5hbWUiOiJqZXN1cyBsb3BleiIsImVtYWlsIjoibDE2NDUwNTIxQGl0ei5lZHUubXgiLCJwYXNzd29yZCI6IiQyYSQxMCRhSHZneU9QM290WTV0TncuYWdiM1V1RHp1T2lGY0xQWTY0WlRieGFJLlVkVW5wWS42cFJZLiIsIl9fdiI6MH0sImlhdCI6MTYyMjQyODY0MSwiZXhwIjoxNjIyNDMyMjQxfQ.mu9ylXXaS-ECQRl6yB4c4ndH1ifSAEVZZ6DaVe8NcpU
+
+{
+    "name": "jesus lopez2",
+    "email": "j216450521@itz.edu.mx",
+    "password": "2jldl123",
+    "tipo": 2
+}
